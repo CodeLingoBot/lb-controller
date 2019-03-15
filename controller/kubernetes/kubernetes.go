@@ -360,7 +360,7 @@ func (lbc *loadBalancerController) getPublicEndpoints(key string) []string {
 	return providerEP
 }
 
-// Starts a load balancer controller
+// Run starts a load balancer controller
 func (lbc *loadBalancerController) Run(provider provider.LBProvider) {
 	logrus.Infof("starting %s controller", lbc.GetName())
 	go lbc.ingController.Run(lbc.stopCh)
